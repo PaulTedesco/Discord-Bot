@@ -24,7 +24,7 @@ yarn run start
 
 👤 **steodec <paul.tedesco@live.fr>**
 
-* Website: paul-tedesco.com
+* Website: [paul-tedesco.com](https://paul-tedesco.com)
 * Github: [@PaulTedesco](https://github.com/PaulTedesco)
 * LinkedIn: [@tedesco-p-972aa7ba](https://linkedin.com/in/tedesco-p-972aa7ba)
 
