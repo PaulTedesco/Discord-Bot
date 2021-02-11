@@ -1,3 +1,4 @@
-import Ping from './Ping';
+import ping from './ping';
+import clear from "./clear";
 
-export {Ping}
+export {ping, clear}

@@ -32,6 +32,6 @@ GuildModel.init({
                     prefix:     {type: DataTypes.STRING, allowNull: false, defaultValue: "!"}
                 }, {
                     sequelize,
-                    modelName: 'Guild',
+                    modelName: 'guild',
                 });
 GuildModel.sync()

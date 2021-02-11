@@ -2,8 +2,8 @@
  * @author: steodec
  * @copyright: Steodec
  */
-import {ClientCustom}                                            from "./ClientCustom";
-import {EmbedFieldData, Message, MessageEmbed, PermissionString} from "discord.js";
+import {ClientCustom} from "./ClientCustom";
+import {ColorResolvable, EmbedFieldData, Message, MessageEmbed, PermissionString} from "discord.js";
 
 export interface Help {
     name: string | null;
@@ -46,21 +46,21 @@ export class Commands {
          * @type {Object}
          */
         this.help = {
-            name:        options.name || null,
+            name: options.name || null,
             description: options.description || "No information specified.",
-            usage:       options.usage || "",
-            category:    options.category || "Information"
+            usage: options.usage || "",
+            category: options.category || "Information"
         };
         /**
          * The command's configuration
          * @type {Object}
          */
         this.conf = {
-            permLevel:  options.permLevel || 0,
+            permLevel: options.permLevel || 0,
             permission: options.permission || "SEND_MESSAGES",
-            countDown:  options.countDown || 1000,
-            aliases:    options.aliases || [],
-            allowDMs:   options.allowDMs || false
+            countDown: options.countDown || 1000,
+            aliases: options.aliases || [],
+            allowDMs: options.allowDMs || false
         };
         /**
          * A set of the IDs of the users on cooldown
@@ -91,12 +91,12 @@ export class Commands {
         this.message.channel.send(messageRespond);
     }
 
-    messageEmbed(title: string, color: string, description: string, fields: Array<EmbedFieldData> | null) {
+    messageEmbed(title: string, color: ColorResolvable | null = null, description: string | null = null, fields: Array<EmbedFieldData> | null = null) {
         this.embed = new MessageEmbed();
         this.embed.setTitle(title || "Steo Games");
         this.embed.setColor(color || Math.floor(Math.random() * 16777214) + 1);
-        this.embed.setThumbnail(this.client.config.avatar);
-        this.embed.setDescription(description);
+        if (description !== null)
+            this.embed.setDescription(description);
         if (fields !== null)
             this.embed.addFields(fields)
 

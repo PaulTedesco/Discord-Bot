@@ -1,11 +1,11 @@
 import ErrnoException = NodeJS.ErrnoException;
 import {ClientOptions, Message} from "discord.js";
 // @ts-ignore
-import * as cmds                from "../commands";
+import * as cmds from "../commands";
 // @ts-ignore
-import * as evts                from "../events";
-import {where}                  from "sequelize";
-import {GuildModel}             from "../models/guild";
+import * as evts from "../events";
+import {where} from "sequelize";
+import {GuildModel} from "../models/guild";
 
 const {Client, Collection} = require('discord.js');
 
